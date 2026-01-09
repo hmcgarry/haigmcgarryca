@@ -1,0 +1,58 @@
+
+.HMNavBar{
+  display: flex;
+  flex-wrap: nowrap;
+  align-content:flex-start;
+  flex-direction: row;
+}
+.HMBody{
+  background-color: #d58dd5 !important;
+}
+
+.HMTitleText{
+  display: inline;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+.HMTitleLink{
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+a.HMTitleText{
+  text-decoration: none;
+}
+
+.HMSmallText{
+  font-family: Helvetica, Arial, sans-serif;
+  color:black;
+}
+.HMSelectedLink{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: white;
+  text-decoration: underline;
+  text-decoration-style: solid;
+}
+
+.HMSelectedLink:hover{
+  color:#d58dd5;
+}
+
+.HMUnselectedLink{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  color: white;
+  text-decoration: none;
+  text-decoration-style: none;
+}
+.HMUnselectedLink:hover{
+  color: #d58dd5;
+  text-decoration: underline;
+
+}
+.HMTabLink{
+  text-decoration: none;
+}
+

@@ -1,0 +1,91 @@
+.HMCard{
+    width: 18rem;
+    height: 21rem;
+    margin: 1%;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.HMCardBody{
+    height: 7rem;
+    overflow: scroll;
+}
+.HMCardFooter{
+    height: 2.6rem;
+    overflow: scroll;
+}
+.HMCardImg {
+    height:12rem;
+    object-fit:cover;
+    object-position: center top;
+    color: #800805;
+    border-radius: 15px 15px 0px 0px;
+    transition: width 0.5s, height 0.5s,  background-color 1s, color 1s,  ease;
+}
+
+.HMCard:hover{
+    transform: translateY(-5px) scale(1.05) translateZ(0);
+    box-shadow: 10px 10px 10px rgba(25,25,25,0.5);
+    animation-name: swivel;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 1.3s;
+    animation-delay: 0ms;
+}
+
+@keyframes swivel {
+    from{
+        rotate: y 0deg;
+    }
+    to{
+        rotate: y 15deg;
+    }
+}
+
+.HMCard:active{
+    transform: translateY(0);
+}
+
+.HMCardGrid {
+    position: absolute;
+}
+
+.HMCardRow .HMCardCol{
+    flex-grow:0;
+    position: relative;
+}
+
+.HMCardBtnContainer{
+    width: 54rem;
+}
+.HMBtnCol{
+    width: 20rem;
+    text-align: center;
+}
+
+.HMPageBtn {
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 2px;
+    border-style:solid;
+    border: 5px;
+    background-color: white;
+    border-color: #800805;
+    color: #800805;
+}
+
+.HMPageBtnActive {
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 2px;
+    border-style:solid;
+    border: 5px;
+    border-color: #800805;
+    background-color: #800805;
+    color:white
+}
+
+.HMPageBtnActive:hover{
+    border-color: #800805;
+    background-color: #800805;
+    color:white
+}
