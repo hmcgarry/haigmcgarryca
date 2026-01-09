@@ -1,4 +1,4 @@
-import styles from '@/styles/hmform.css'
+import styles from '@/styles/hmform.module.css'
 export default function ContactForm(){
     return(
     <form action="https://formsubmit.co/e1ce23fb350fd46fa60e91af659afd3b" method='POST'>
