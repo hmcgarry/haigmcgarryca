@@ -3,7 +3,7 @@ export default function ContactForm(){
     <form action="https://formsubmit.co/e1ce23fb350fd46fa60e91af659afd3b" method='POST'>
 
         <input type="hidden" name="_subject" value="Website Email" />
-        <input type="text" name="_honey" style={{display:none}} />
+        <input type="text" name="_honey" className={styles.HMFormHoney} />
         <input type="hidden" name="_captcha" value="false" />
 
         <input type="text" name="firstname" required/>
