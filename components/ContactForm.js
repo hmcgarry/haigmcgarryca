@@ -1,4 +1,5 @@
 export default function ContactForm(){
+    return(
     <form action="https://formsubmit.co/mcgarry.haig@gmail.com" method='POST'>
         <input type="text" name="firstname" required/>
         <input type='text' name="lastname" required/>
@@ -6,4 +7,5 @@ export default function ContactForm(){
         <textarea name='comment'></textarea>
         <button type="submit">Secondary</button>
     </form>
+    )
 }
