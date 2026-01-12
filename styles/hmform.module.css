@@ -8,14 +8,15 @@
 }
 
 .HMFormBtn {
-    width: 4rem;
-    height: 3rem;
+    width: 3.6rem;
+    height: 2rem;
     border-radius: 2px;
     border: 2px;
     border-style: solid;
     border-color: #800850;
     color: #800850;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
 }
 .HMFormBtn:active {
     background-color: #800850;
@@ -28,4 +29,6 @@
 }
 .HMFormTextArea {
     resize: none;
+    width: 20rem;
+    height: 5rem;
 }
