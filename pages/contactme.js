@@ -1,4 +1,4 @@
-import styles from "../styles/hmncard.module.css"
+import styles from "../styles/hmcard.module.css"
 import WebNavbar from "../components/Navbar"
 import ContactForm from "@/components/ContactForm"
 import Head from "next/head"
