@@ -21,7 +21,7 @@ const currentBook = [{
     "Cover Image": "/images/theoryandmethodologyofsemioticscover.jpg",
     "Release Year": "2016",
     "Genre": ["Philosophy", "Semiotics", "Linguistics", "Reference", "Non-Fiction"],
-}
+},
 
 ];
 export default currentBook;

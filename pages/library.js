@@ -6,18 +6,16 @@ import Head from 'next/head'
 import BookGrid from "@/components/BookGrid"
 import {useState, useEffect, use, useEffectEvent} from 'react'
 import styles from '@/styles/hmcard.module.css';
+
+const btns = ["Finished Reading", "Currently Reading"];
+
 export default function BookCorner(){
     const [page, setPage] = useState(0);
     const [component, setComponent] = useState(null);
+    const [btnJsx, setBtnJsx] = useState([]);
    // const [displayBooks, setDisplayBooks] = useState([]);
-   const handlePageUpdate = useEffectEvent((jsx)=>{
-        setComponent(jsx);
-   })
-   useEffect(()=>{
-    handlePageUpdate((<BookGrid displayBooks={books} />)); //default to finished reading
-   },[])
 
-    const handleBtnClick = (btnVal) => {
+ const handleBtnClick = (btnVal) => {
         switch(btnVal){
             case 0:
                 if (page){
@@ -30,9 +28,46 @@ export default function BookCorner(){
                     setPage(btnVal);
                     setComponent((<BookGrid displayBooks={currentBooks} />))
                 }
-                
+                break;
         }
     }
+
+    const updateBtns = useEffectEvent((arr)=>{
+        setBtnJsx(arr);
+    })
+
+    useEffect(()=>{
+                let tempArr = btnJsx.map((btn, idx)=>{
+                    return <Col key={idx} 
+                    className={`${styles.HMBtnCol}`}> <Button size="sm" onClick={(e)=>{
+                        handleBtnClick(idx);
+                    }} id="finished-btn" variant="outline-main" active={idx===page}>
+                        {btns[idx]}
+                    </Button> </Col>
+        })
+        updateBtns(tempArr);
+    }, [page])
+
+   const handlePageUpdate = useEffectEvent((jsx)=>{
+        setComponent(jsx);
+        let tempArr = [];
+         btns.forEach((btn, idx)=>{
+            tempArr.push(<Col className={`${styles.HMBtnCol}`}>
+                    <Button size="sm" onClick={(e)=>{
+                        handleBtnClick(idx);
+                    }} id="finished-btn" variant="outline-main" active={idx===page}>
+                        {btn}
+                    </Button></Col>)
+        })
+        setBtnJsx(tempArr);
+       
+   })
+   useEffect(()=>{
+    handlePageUpdate((<BookGrid displayBooks={books} />)); //default to finished reading
+
+   },[])
+
+   
     return (
     <>
         <WebNavbar />
@@ -41,22 +76,9 @@ export default function BookCorner(){
             <meta name="Library"></meta>
         </Head>
         <body>
-            <Container  className={`justify-content-md-center align-items-center ${styles.HMCardBtnContainer}`} >
+            <Container  className={`justify-content-md-center align-items-center mt-2 ${styles.HMCardBtnContainer}`} >
                 <Row>
-                    <Col className={`${styles.HMBtnCol}`}>
-                    <Button size="sm" onClick={(e)=>{
-                        handleBtnClick(0);
-                    }} id="finished-btn">
-                        Finished Reading
-                    </Button>
-                    </Col>
-                    <Col className={`${styles.HMBtnCol}`}>
-                    <Button size="sm"onClick={(e)=>{
-                        handleBtnClick(1);
-                    }} id="current-btn">
-                        Currently Reading
-                    </Button>
-                    </Col>
+                    {btnJsx}
                 </Row>
             </Container>
             {component}
