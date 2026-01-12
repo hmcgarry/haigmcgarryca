@@ -1,3 +1,31 @@
 .HMFormHoney {
     display: none;
 }
+
+.HMForm{
+    font-family: Arial, Helvetica, sans-serif;
+    color:#800805
+}
+
+.HMFormBtn {
+    width: 4rem;
+    height: 3rem;
+    border-radius: 2px;
+    border: 2px;
+    border-style: solid;
+    border-color: #800850;
+    color: #800850;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.HMFormBtn:active {
+    background-color: #800850;
+    color: white;
+}
+
+.HMFormName {
+    width: 12rem;
+    color:#800850;
+}
+.HMFormTextArea {
+    resize: none;
+}
