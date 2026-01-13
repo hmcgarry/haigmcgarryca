@@ -76,7 +76,7 @@ export default function BookCorner(){
             <meta name="Library"></meta>
         </Head>
         <body>
-            <Container  className={`justify-content-md-center align-items-center mt-2 ${styles.HMCardBtnContainer}`} >
+            <Container  className={`justify-content-md-center align-items-center mt-2 ${styles.HMCardBtnContainer}`} fluid>
                 <Row>
                     {btnJsx}
                 </Row>
