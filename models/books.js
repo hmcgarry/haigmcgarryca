@@ -27,7 +27,6 @@ const books = [
     "Release Year": "1915",
     "Genre": ["Fiction", "Tragedy", "Surreal", "Psychological"],
     "Rating": 8,
-    "Comment": "One thing I admire most about this novel is how well Kafka is capable of making the reader pity Gregor Samsa. Many people, in my experience, fixate on the 'Kafkaesque' quality of Kakfa's writings; that is a combination of the bizarre with the mundane, but what sets this novel apart from other works by Kafka is how truly pathetic Samsa is made out to be. Secondary texts describe this aspect as being autobiographical, how its revealing of Kafka's own self-perception around his family. How Samsa's only value to his family is in his ability to work, to provide money, and once that goes he's locked away. Beaten and scorned, he lives out the rest of his days in his bedroom, loathed and feared by those he loves."
     },
     {
     "id": 3,
@@ -73,6 +72,24 @@ const books = [
     "Release Year": "1942",
     "Genre": ["Fiction", "Character Study", "Surreal"],
     "Rating": 8
-    }
+    },
+    {
+    "id": 8,
+    "Title": "Anna Karenina",
+    "Author": "Leo Tolstoy",
+    "Cover Image": "/images/annakareninacover.jpg",
+    "Release Year": "1878",
+    "Genre": ["Fiction", "Character Study", "Romance", "Classic"],
+    "Rating": 9
+},
+{
+    "id": 9,
+    "Title": "This Craft of Verse",
+    "Author": "Jorge Luis Borges",
+    "Cover Image": "/images/thiscraftofverse.jpg",
+    "Release Year": "1991",
+    "Genre": ["Poetry", "Literature", "Literary Theory", "Nonfiction"],
+    "Rating": 9
+},
 ]
 export default books;

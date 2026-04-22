@@ -123,12 +123,22 @@ useEffect(()=>{
     for (let i = 0; i < NUM_OF_ROWS; i++){
         rowSize = subArr.length < BOOKS_PER_ROW ? subArr.length : BOOKS_PER_ROW;
         console.log('Row size: ' + rowSize)
+        console.log("Book Array: ", {subArr})
         for (let j = 0; j < (rowSize); j++){
             //console.log(subArr[j]);
+            if (subArr[j].Title.match(/verse/i)){
+                console.log("book craft of verse, i value: " + i + " Row size: " + rowSize)
+            }
+
             colJSX.push(<Col key={j} className={`p-3 ${styles.HMCardCol} justify-content-center align-items-centers`}> <BookCard book={subArr[j]}/> </Col>)
         }
 
-        let element = <Row key={i} className={`p-3 ${styles.HMCardRow} justify-content-center align-items-centers`}>{colJSX.slice(i * rowSize, (i + 1) * rowSize)}</Row>;
+
+        if (i > 0 && rowSize < BOOKS_PER_ROW){
+            console.log("Nonfull row detected")
+        }
+
+        let element = <Row key={i} className={`p-3 ${styles.HMCardRow} justify-content-center align-items-centers`}>{(i > 0 && rowSize === BOOKS_PER_ROW) ? colJSX.slice(i * rowSize, (i + 1) * rowSize): colJSX.slice((i * BOOKS_PER_ROW))}</Row>;
         
         tempArr.push(element);
        //console.log(element)

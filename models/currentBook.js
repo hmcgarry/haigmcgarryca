@@ -1,10 +1,11 @@
-const currentBook = [{
+const currentBook = [
+    {
     "id": 0,
-    "Title": "Anna Karenina",
-    "Author": "Leo Tolstoy",
-    "Cover Image": "/images/annakareninacover.jpg",
-    "Release Year": "1878",
-    "Genre": ["Fiction", "Character Study", "Romance", "Classic"],
+    "Title": "The Politics of Experience / The Bird of Paradise",
+    "Author": "R.D. Laing",
+    "Cover Image": "/images/politicsofexperience.jpg",
+    "Release Year": "1967",
+    "Genre": ["Philosophy", "Psychology", "Social Commentary", "Nonfiction"],
 },
 {
     "id": 1,
@@ -22,6 +23,7 @@ const currentBook = [{
     "Release Year": "2016",
     "Genre": ["Philosophy", "Semiotics", "Linguistics", "Reference", "Non-Fiction"],
 },
+
 
 ];
 export default currentBook;
