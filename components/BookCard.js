@@ -40,7 +40,7 @@ export default function BookCard(prop){
         return(
         <>
         <div>
-        <Card className={`bg-main text-aux ${styles.HMCard}`} id={`card-${prop.book.id}`} onClick={displayModal}>
+        <Card className={`bg-main text-aux ${styles.HMCard}`} id={`card-${prop.book.id} hide-scrollbar`} onClick={displayModal}>
             <Card.Img src={prop.book["Cover Image"]} alt={`Cover of ${prop.book.Title} by ${prop.book.Author}`} className={styles.HMCardImg} id={`card-img-${prop.book.id}`}/>
             <Card.Body className={`${styles.HMCardBody}`}>
                 <Card.Title className={`text-white ${styles.HMCardText}`}>{prop.book.Title}</Card.Title>

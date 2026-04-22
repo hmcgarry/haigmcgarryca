@@ -6,14 +6,18 @@
     text-align: center;
     transition: all 0.3s ease;
     cursor: pointer;
+    scrollbar-width: none;
 }
 .HMCardBody{
     height: 7rem;
     overflow: scroll;
+    scrollbar-width: none;
+
 }
 .HMCardFooter{
     height: 2.6rem;
     overflow: scroll;
+    scrollbar-width: none;
 }
 .HMCardImg {
     height:12rem;
@@ -88,4 +92,19 @@
     border-color: #800805;
     background-color: #800805;
     color:white
+}
+
+.hide-scrollbar {
+  /* WebKit */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+    /* Firefox */
+  scrollbar-width: none;
+ 
+  /* IE/Edge Legacy */
+  -ms-overflow-style: none;
+ 
+  /* Enable scrolling */
+  overflow: auto; /* Use "scroll" to force scrollbar space even if not needed */
 }
