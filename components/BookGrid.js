@@ -138,7 +138,8 @@ useEffect(()=>{
             console.log("Nonfull row detected")
         }
 
-        let element = <Row key={i} className={`p-3 ${styles.HMCardRow} justify-content-center align-items-centers`}>{(i > 0 && rowSize === BOOKS_PER_ROW) ? colJSX.slice(i * rowSize, (i + 1) * rowSize): colJSX.slice((i * BOOKS_PER_ROW))}</Row>;
+        //let element = <Row key={i} className={`p-3 ${styles.HMCardRow} justify-content-center align-items-centers`}>{(i > 0 && rowSize === BOOKS_PER_ROW) ? colJSX.slice(i * rowSize, (i + 1) * rowSize): colJSX.slice((i * BOOKS_PER_ROW))}</Row>;
+        let element = <Row key={i} className={`p-3 ${styles.HMCardRow} justify-content-center align-items-centers`}>{colJSX.slice(i * BOOKS_PER_ROW, (i * BOOKS_PER_ROW) + rowSize)}</Row>;
         
         tempArr.push(element);
        //console.log(element)
